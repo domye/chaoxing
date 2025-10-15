@@ -1,23 +1,23 @@
 name: 刷课
 
 on:
-  push:
-    branches: [ main ]
-  # schedule:
-  #   - cron: "0 8 * * *"  # 8:00 AM UTC every day
-  #   - cron: "0 15 * * *" # 3:00 PM UTC every day
+  # push:
+  #   branches: [ main ]
+  schedule:
+    - cron: "0 8 * * *"  # 8:00 AM UTC every day
+    - cron: "0 15 * * *" # 3:00 PM UTC every day
     
 jobs: 
   Start:
     runs-on: ubuntu-latest # 在最新版本的 Ubuntu 操作系统环境下运行
     steps: # 要执行的步骤
       - name: 拷贝代码
-        uses: actions/checkout@v3  # 用于将github代码仓库的代码拷贝到工作目录中
+        uses: actions/checkout@v3  # 用于将 github 代码仓库的代码拷贝到工作目录中
  
-      - name: 设置python环境
+      - name: 设置 python 环境
         uses: actions/setup-python@v2 # 用于设置 Python 环境，它允许你指定要在工作环境中使用的 Python 版本
         with:
-          python-version: '3.10'  # 选择要用的Python版本
+          python-version: '3.10'  # 选择要用的 Python 版本
  
       - name: 安装依赖包
         run: | # 安装依赖包
@@ -25,4 +25,4 @@ jobs:
           
       
       - name: Run main.py
-        run: python main.py -u 18918045607 -p 987789qw -l 256867769
+        run: python main.py -u 18918045607 -p 987789qw -l 256867769,256868142
