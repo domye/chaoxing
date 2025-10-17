@@ -1,5 +1,4 @@
 name: 刷课
-
 on:
   push:
     branches: [ main ]
