@@ -15,7 +15,7 @@ jobs:
         uses: actions/setup-python@v2 # 用于设置 Python 环境，它允许你指定要在工作环境中使用的 Python 版本
         with:
           python-version: '3.10'  # 选择要用的 Python 版本
- 
+
       - name: 安装依赖包
         run: | # 安装依赖包
           pip install -r ./requirements.txt 
